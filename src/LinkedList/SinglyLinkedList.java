@@ -112,6 +112,17 @@ public class SinglyLinkedList {
         return;
     }
 
+    public Object search(Object k) {
+        Node temp = head;
+        while(temp != null) {
+            if(temp.getData() == k) {
+                return temp;
+            }
+            temp = temp.getNext();
+        }
+        return null;
+    }
+
     public void getMiddleNode() {
         Node oneStep = head;
         Node twoStep = head;
