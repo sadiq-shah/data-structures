@@ -97,4 +97,18 @@ public class SinglyLinkedList {
         }
         return;
     }
+
+
+    public void reverseDisplay() {
+         reverseNodeDisplay(head);
+         return;
+    }
+
+    private void reverseNodeDisplay(Node temp) {
+        if(temp != null) {
+            reverseNodeDisplay(temp.getNext());
+            System.out.println(temp.getData().toString());
+        }
+        return;
+    }
 }
