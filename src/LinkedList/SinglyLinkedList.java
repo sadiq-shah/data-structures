@@ -111,4 +111,31 @@ public class SinglyLinkedList {
         }
         return;
     }
+
+    public void getMiddleNode() {
+        Node oneStep = head;
+        Node twoStep = head;
+        boolean isOdd = false;
+        while(twoStep != null) {
+            if(twoStep.getNext() != null) {
+                twoStep = twoStep.getNext().getNext();
+            }
+            else {
+                isOdd = true;
+                break;
+            }
+            if(twoStep != null) {
+                oneStep = oneStep.getNext();
+            }
+
+        }
+        if(isOdd) {
+            System.out.println(oneStep.getData().toString());
+        }
+        else {
+            System.out.println(oneStep.getData().toString());
+            System.out.println(oneStep.getNext().getData().toString());
+        }
+
+    }
 }

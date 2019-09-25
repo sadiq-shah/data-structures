@@ -15,12 +15,14 @@ public class LinkedListDemo {
         list.display();
 
         SinglyLinkedList list1 = new SinglyLinkedList();
-        list1.reverseDisplay();
         list1.addLast(2);
         list1.addLast(3);
         list1.addLast(4);
         list1.addLast(5);
-        list1.reverseDisplay();
+        list1.addLast(6);
+        list1.addLast(7 );
+        System.out.println("Mid");
+        list1.getMiddleNode();
     }
 
 }
