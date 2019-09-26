@@ -14,6 +14,7 @@ public class BinarySearchTree {
         }
 
         while(temp != null) {
+
             if(value.toString().equals(temp.getData().toString())) {
                 return;
             }
@@ -23,7 +24,6 @@ public class BinarySearchTree {
                     temp.setRight(newNode);
                     return;
                 }
-
                 temp = temp.getRight();
             }
             else {
@@ -33,8 +33,9 @@ public class BinarySearchTree {
                 }
                 temp = temp.getLeft();
             }
-            return;
         }
+
+        return;
     }
 
     public void preTraversal(){
@@ -43,9 +44,37 @@ public class BinarySearchTree {
 
     private void preOrderTraversal(Node temp) {
         if(temp != null) {
-            preOrderTraversal(temp.getLeft());
             System.out.println(temp.getData().toString());
+            preOrderTraversal(temp.getLeft());
             preOrderTraversal(temp.getRight());
+        }
+        return;
+    }
+
+    public void inTraversal() {
+       inOrderTraversal(root);
+       return;
+    }
+
+    private void inOrderTraversal(Node temp) {
+        if(temp != null) {
+            inOrderTraversal(temp.getLeft());
+            System.out.println(temp.getData().toString());
+            inOrderTraversal(temp.getRight());
+        }
+        return;
+    }
+
+    public void postTraversal() {
+        postOrderTraversal(root);
+        return;
+    }
+
+    private void postOrderTraversal(Node temp) {
+        if(temp != null) {
+            postOrderTraversal(temp.getLeft());
+            postOrderTraversal(temp.getRight());
+            System.out.println(temp.getData().toString());
         }
         return;
     }
